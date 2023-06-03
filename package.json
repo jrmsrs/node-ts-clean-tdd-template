@@ -10,7 +10,9 @@
     "test": "echo \"jest not configured yet\"",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "lint": "ts-standard",
+    "lint:fix": "ts-standard --fix"
   },
   "dependencies": {
     "@types/node": "^20.2.5",
@@ -18,7 +20,8 @@
   },
   "devDependencies": {
     "husky": "^8.0.0",
-    "pinst": "^3.0.0"
+    "pinst": "^3.0.0",
+    "ts-standard": "^12.0.2"
   },
   "packageManager": "yarn@3.6.0"
 }
