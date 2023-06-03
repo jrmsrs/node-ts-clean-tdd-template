@@ -1,0 +1,10 @@
+{
+  "name": "node-ts-clean-tdd-template",
+  "version": "1.0.0",
+  "description": "my template for node+typescript clean modular projects",
+  "main": "index.js",
+  "repository": "http://github.com/jrmsrs/node-ts-clean-tdd-template",
+  "author": "junior m. soares <jrmsrs2.0@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.0"
+}
