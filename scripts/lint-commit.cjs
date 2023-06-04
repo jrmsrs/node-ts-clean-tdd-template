@@ -28,7 +28,7 @@ const msgSecondLine = msg.split('\n')[1]
 // -- todo lint body --
 // const msgBody = msg.split('\n').slice(2).join('\n');
 
-const noUppercase = /^(?!.*[A-Z]).*$/
+const checkUppercase = /^[^A-Z]*$/
 
 const emojiSpace = msgFirstLine.slice(0, 3)
 const emojiSpaceRegex = /^(🔧|👷|🔨|🐎|📚|🐛|✨|💄|🚀|🧪|⏪|🎉) /
@@ -49,7 +49,7 @@ class CommitMsgError extends Error {
   }
 }
 
-if (!noUppercase.test(msg)) {
+if (!checkUppercase.test(msg)) {
   const message = `-> uppercase; msg should not contain uppercase letters\n${msg}`
   console.log(`commit -m Error: ${message}`)
   throw new CommitMsgError(message)
